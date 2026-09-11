@@ -1,0 +1,11 @@
+ktor:
+  deployment:
+    port: 8080
+  application:
+    modules:
+      - com.syncfit.KoinKt.configureKoin
+      - com.syncfit.HttpKt.configureHttp
+      - com.syncfit.SerializationKt.configureSerialization
+      - com.syncfit.ResourcesKt.configureResources
+      - com.syncfit.RoutingKt.configureRouting
+      - com.syncfit.MonitoringKt.configureMonitoring
