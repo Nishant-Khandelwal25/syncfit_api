@@ -1,11 +1,10 @@
 package com.syncfit.model
 
 import kotlinx.serialization.Serializable
-import java.util.UUID
 
 @Serializable
 data class ExerciseInfo(
-    val id: Int = UUID.randomUUID().hashCode(),
+    val id: Int,
     val exerciseName: String,
     val exerciseVariations: List<String>,
     val primaryMuscle: String,
