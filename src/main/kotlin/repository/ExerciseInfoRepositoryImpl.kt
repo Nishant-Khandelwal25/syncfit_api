@@ -8,7 +8,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
     override val exerciseInfoByType: Map<ExerciseType, ExerciseInfo> = mapOf(
         ExerciseType.SQUAT to ExerciseInfo(
             id = 1,
-            exerciseName = "Barbell Squat",
+            exerciseName = "Squat",
             exerciseVariations = listOf(
                 "Bodyweight Squat",
                 "Barbell Back Squat",
@@ -35,7 +35,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.BICEP_CURL to ExerciseInfo(
             id = 2,
-            exerciseName = "Barbell Bicep Curl",
+            exerciseName = "Bicep Curl",
             exerciseVariations = listOf(
                 "Barbell Bicep Curl",
                 "Dumbbell Bicep Curl",
@@ -62,7 +62,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.DEADLIFT to ExerciseInfo(
             id = 3,
-            exerciseName = "Barbell Deadlift",
+            exerciseName = "Deadlift",
             exerciseVariations = listOf(
                 "Conventional Barbell Deadlift",
                 "Sumo Deadlift",
@@ -86,9 +86,9 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
             isAiFormCheckEnabled = false,
             demonstrationLink = "",
         ),
-        ExerciseType.DUMBBELL_LATERAL_RAISE to ExerciseInfo(
+        ExerciseType.LATERAL_RAISE to ExerciseInfo(
             id = 4,
-            exerciseName = "Dumbbell Lateral Raise",
+            exerciseName = "Lateral Raise",
             exerciseVariations = listOf(
                 "Standing Dumbbell Lateral Raise",
                 "Seated Dumbbell Lateral Raise",
@@ -114,7 +114,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.FLAT_CHEST_PRESS to ExerciseInfo(
             id = 5,
-            exerciseName = "Flat Barbell Chest Press",
+            exerciseName = "Flat Chest Press",
             exerciseVariations = listOf(
                 "Flat Barbell Chest Press",
                 "Flat Dumbbell Chest Press",
@@ -139,7 +139,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.INCLINE_CHEST_PRESS to ExerciseInfo(
             id = 6,
-            exerciseName = "Incline Dumbbell Chest Press",
+            exerciseName = "Incline Chest Press",
             exerciseVariations = listOf(
                 "Incline Dumbbell Chest Press",
                 "Incline Barbell Chest Press",
@@ -188,7 +188,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.SHOULDER_PRESS to ExerciseInfo(
             id = 8,
-            exerciseName = "Dumbbell Shoulder Press",
+            exerciseName = "Shoulder Press",
             exerciseVariations = listOf(
                 "Seated Dumbbell Shoulder Press",
                 "Standing Dumbbell Shoulder Press",
@@ -215,7 +215,7 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
         ),
         ExerciseType.TRICEP_EXTENSION to ExerciseInfo(
             id = 9,
-            exerciseName = "Straight Bar Cable Tricep Extension",
+            exerciseName = "Tricep Extension",
             exerciseVariations = listOf(
                 "Straight-Bar Cable Pushdown",
                 "Rope Cable Pushdown",
