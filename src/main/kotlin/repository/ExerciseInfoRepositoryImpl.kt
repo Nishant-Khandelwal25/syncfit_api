@@ -3,6 +3,8 @@ package com.syncfit.repository
 import com.syncfit.model.ExerciseInfo
 import com.syncfit.model.ExerciseInfoApiResponse
 import com.syncfit.model.ExerciseType
+import com.syncfit.model.ExercisesListApiResponse
+import com.syncfit.model.WorkoutInfo
 
 class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
     override val exerciseInfoByType: Map<ExerciseType, ExerciseInfo> = mapOf(
@@ -262,4 +264,89 @@ class ExerciseInfoRepositoryImpl : ExerciseInfoRepository {
             exerciseInfo = exerciseInfo,
         )
     }
+
+    override val exercisesList: List<WorkoutInfo>
+        get() = buildList {
+            add(
+                WorkoutInfo(
+                    id = 1,
+                    exerciseName = "Squat",
+                    bodyPart = "Legs",
+                    exerciseType = ExerciseType.SQUAT,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 2,
+                    exerciseName = "Bicep Curl",
+                    bodyPart = "Arms",
+                    exerciseType = ExerciseType.BICEP_CURL,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 3,
+                    exerciseName = "Deadlift",
+                    bodyPart = "Back",
+                    exerciseType = ExerciseType.DEADLIFT,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 4,
+                    exerciseName = "Lateral Raise",
+                    bodyPart = "Shoulders",
+                    exerciseType = ExerciseType.LATERAL_RAISE,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 5,
+                    exerciseName = "Flat Chest Press",
+                    bodyPart = "Chest",
+                    exerciseType = ExerciseType.FLAT_CHEST_PRESS,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 6,
+                    exerciseName = "Incline Chest Press",
+                    bodyPart = "Chest",
+                    exerciseType = ExerciseType.INCLINE_CHEST_PRESS,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 7,
+                    exerciseName = "Leg Press",
+                    bodyPart = "Legs",
+                    exerciseType = ExerciseType.LEG_PRESS,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 8,
+                    exerciseName = "Shoulder Press",
+                    bodyPart = "Shoulders",
+                    exerciseType = ExerciseType.SHOULDER_PRESS,
+                ),
+            )
+            add(
+                WorkoutInfo(
+                    id = 9,
+                    exerciseName = "Tricep Extension",
+                    bodyPart = "Arms",
+                    exerciseType = ExerciseType.TRICEP_EXTENSION,
+                ),
+            )
+        }
+
+    override suspend fun getExerciseList(): ExercisesListApiResponse {
+        return if (exercisesList.isEmpty()) {
+            ExercisesListApiResponse(success = false, message = "No exercises found")
+        } else {
+            ExercisesListApiResponse(success = true, exercisesList = exercisesList)
+        }
+    }
+
 }
